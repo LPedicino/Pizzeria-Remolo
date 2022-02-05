@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 ### `npm i or npm install`
 
-It will install all the files inside .gitignore
+Will install all the files and folders inside .gitignore
 
 ### `npm start`
 
