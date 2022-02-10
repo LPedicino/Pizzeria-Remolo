@@ -1,20 +1,3 @@
-/*  .Header {
-  background-color: red;
-  .Box {
-    .AppBar {
-      .Toolbar {
-        img {
-          width: 10px;
-          height: 10px;
-        }
-      }
-    }
-  }
-} */
-
-/* 
-                  <-- Responsive Navbar Styles -->
-  */
 * {
   box-sizing: border-box;
 }
@@ -35,6 +18,7 @@ body {
 .brand-title {
   font-size: 1.5rem;
   margin: 0.5rem;
+  font-family: "Abril Fatface", cursive;
 }
 
 .navbar-links ul {
@@ -45,6 +29,7 @@ body {
 
 .navbar-links li {
   list-style: none;
+  font-family: "Abril Fatface", cursive;
 }
 
 .navbar-links li a {
@@ -58,45 +43,91 @@ body {
   background-color: #f2695c;
 }
 
-.toggle-button {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button:hover {
-  background-color: #f2695c;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #f2f1df;
-  border-radius: 10px;
-}
-
 img {
   width: 50px;
+  border-radius: 18px;
 }
 
-@media (max-width: 700px) {
-  .toggle-button {
-    display: flex;
-  }
+.logo-container {
+  display: flex;
+}
 
+.menu-drop {
+  background-color: #f23827;
+  font-family: "Abril Fatface", cursive;
+}
+
+/* .menu {
+  display: none;
+} */
+
+.menu-item {
+  background-color: #f23827;
+  color: #f2f1df;
+}
+
+.menu {
+  display: flex;
+  background-color: #f23827;
+}
+
+.menu:hover {
+  background-color: #f23827;
+  border-color: #f23827;
+}
+
+.menu:focus {
+  background-color: #f23827;
+  border-color: #f23827;
+  color: #f2f1df;
+}
+.btn-check:active + .btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+  color: #f2f1df;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #f2f1df;
+  background-color: #f23827;
+  border-color: #f23827;
+  box-shadow: none;
+}
+
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  color: #f2f1df;
+  background-color: #f23827;
+  border-color: #f23827;
+  box-shadow: none;
+}
+
+.btn-primary {
+  color: #f2f1df;
+  background-color: #f23827;
+  border-color: #f23827;
+  font-family: "Abril Fatface", cursive;
+}
+.btn-primary:hover {
+  color: #f2f1df;
+}
+@media (max-width: 700px) {
   .navbar-links {
     display: none;
     width: 100%;
   }
 
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
   }
 
   .navbar-links ul {
@@ -121,14 +152,36 @@ img {
 
   .logo-container {
     display: flex;
-    margin-left: 200px;
+    margin-left: 150px;
+    border-radius: 25px;
   }
 
   .brand-title {
     display: none;
   }
-}
+  .menu {
+    display: flex;
+    background-color: #f23827;
+    color: #f2f1df;
+  }
 
-.logo-container {
-  display: flex;
+  .menu:hover {
+    background-color: #f23827;
+    color: #f2f1df;
+  }
+
+  .menu:focus {
+    background-color: #f23827;
+    color: #f2f1df;
+  }
+  .btn-primary:focus {
+    color: #f2f1df;
+    background-color: #f23827;
+    border-color: #f23827;
+  }
+  .btn-primary {
+    color: #f2f1df;
+    background-color: #f23827;
+    border-color: #f23827;
+  }
 }
