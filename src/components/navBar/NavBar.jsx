@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <>
       <nav class="navbar">
-        <div class="brand-title">Pizzeria Remolo</div>
+        <div class="brand-title">Pizzeria Don Remolo</div>
         <div className="logo-container">
           <img src={logo} alt="" />
         </div>

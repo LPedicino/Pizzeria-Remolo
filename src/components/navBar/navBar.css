@@ -57,56 +57,9 @@ img {
   font-family: "Abril Fatface", cursive;
 }
 
-/* .menu {
-  display: none;
-} */
-
 .menu-item {
   background-color: #f23827;
   color: #f2f1df;
-}
-
-.menu {
-  display: flex;
-  background-color: #f23827;
-}
-
-.menu:hover {
-  background-color: #f23827;
-  border-color: #f23827;
-}
-
-.menu:focus {
-  background-color: #f23827;
-  border-color: #f23827;
-  color: #f2f1df;
-}
-.btn-check:active + .btn-primary:focus,
-.btn-check:checked + .btn-primary:focus,
-.btn-primary.active:focus,
-.btn-primary:active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: none;
-  color: #f2f1df;
-}
-
-.btn-check:focus + .btn-primary,
-.btn-primary:focus {
-  color: #f2f1df;
-  background-color: #f23827;
-  border-color: #f23827;
-  box-shadow: none;
-}
-
-.btn-check:active + .btn-primary,
-.btn-check:checked + .btn-primary,
-.btn-primary.active,
-.btn-primary:active,
-.show > .btn-primary.dropdown-toggle {
-  color: #f2f1df;
-  background-color: #f23827;
-  border-color: #f23827;
-  box-shadow: none;
 }
 
 .btn-primary {
@@ -114,10 +67,9 @@ img {
   background-color: #f23827;
   border-color: #f23827;
   font-family: "Abril Fatface", cursive;
+  display: none;
 }
-.btn-primary:hover {
-  color: #f2f1df;
-}
+
 @media (max-width: 700px) {
   .navbar-links {
     display: none;
@@ -147,9 +99,6 @@ img {
     display: flex;
   }
 
-  /* img {
-  } */
-
   .logo-container {
     display: flex;
     margin-left: 150px;
@@ -165,23 +114,27 @@ img {
     color: #f2f1df;
   }
 
-  .menu:hover {
-    background-color: #f23827;
-    color: #f2f1df;
-  }
-
-  .menu:focus {
-    background-color: #f23827;
-    color: #f2f1df;
-  }
-  .btn-primary:focus {
+  .btn-check:focus + .btn-primary,
+  .btn-primary:focus,
+  .btn-check:active + .btn-primary:focus,
+  .btn-check:checked + .btn-primary:focus,
+  .btn-primary.active:focus,
+  .btn-primary:active:focus,
+  .show > .btn-primary.dropdown-toggle:focus,
+  .btn-check:active + .btn-primary,
+  .btn-check:checked + .btn-primary,
+  .btn-primary.active,
+  .btn-primary:active,
+  .show > .btn-primary.dropdown-toggle,
+  .btn-check:active + .btn-primary,
+  .btn-check:checked + .btn-primary,
+  .btn-primary.active,
+  .btn-primary:active,
+  .show > .btn-primary.dropdown-toggle,
+  .btn-primary:hover {
     color: #f2f1df;
     background-color: #f23827;
     border-color: #f23827;
-  }
-  .btn-primary {
-    color: #f2f1df;
-    background-color: #f23827;
-    border-color: #f23827;
+    box-shadow: none;
   }
 }
