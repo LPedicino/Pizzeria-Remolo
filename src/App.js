@@ -1,14 +1,10 @@
-import logo from "./assets/logo.png";
-import Carrousel from "./components/carrousel/Carrousel";
+import NavBar from "./components/navBar/NavBar";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} alt="logo" />
-        <h1>hola mundo</h1>
-
-        <Carrousel />
+        <NavBar />
       </header>
     </div>
   );
