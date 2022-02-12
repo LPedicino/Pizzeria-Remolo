@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Install all the depenendencies
+Install all the depenendencies and node_modules folder
 
 ### `npm start`
 
