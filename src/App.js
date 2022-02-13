@@ -1,4 +1,6 @@
 import NavBar from "./components/navBar/NavBar";
+import Footer from "./components/footer/Footer";
+
 
 function App() {
   return (
@@ -6,6 +8,8 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
+      <div className="w-100"> <Footer /></div>
+      
     </div>
   );
 }
