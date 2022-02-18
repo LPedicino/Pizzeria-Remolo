@@ -11,7 +11,7 @@ export default function Header() {
       <nav class="navbar">
         <div class="brand-title">Pizzeria Don Remolo</div>
         <div className="logo-container">
-          <img src={logo} alt="" />
+          <img src={logo} alt="Logo" />
         </div>
         <div class="navbar-links">
           <ul>

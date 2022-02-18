@@ -1,14 +1,25 @@
-.carousel.slide{
-    height: 236px;
+.carousel.slide {
+  height: 400px;
+  width: 100%;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel.slide img {
+  border-radius: 0;
+  object-fit: cover;
+  max-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .carousel.slide {
+    height: 250px;
     width: 100%;
-}
+  }
 
-.carousel-item{
-    height: 236px;
-}
-
-.carousel.slide img{
-    border-radius: 0;
-    object-fit: cover;
-    max-height: 100%;
+  .carousel-item {
+    height: 250px;
+  }
 }

@@ -1,30 +1,23 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import './carousel.css'
-import carousel1 from './carousel-1.png'
-
+import "./carousel.css";
+import carousel1 from "./carousel-1.png";
+import carousel2 from "./carousel2.png";
+import carousel3 from "./carousel3.png";
 
 const CarouselImg = () => {
   return (
     <>
       <Carousel>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={carousel1}
-            alt="First slide"
-          />
+          <img className="d-block w-100" src={carousel1} alt="First slide" />
           <Carousel.Caption>
             {/* <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={carousel1}
-            alt="Second slide"
-          />
+          <img className="d-block w-100" src={carousel2} alt="Second slide" />
 
           <Carousel.Caption>
             {/* <h3>Second slide label</h3>
@@ -32,11 +25,7 @@ const CarouselImg = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={carousel1}
-            alt="Third slide"
-          />
+          <img className="d-block w-100" src={carousel3} alt="Third slide" />
 
           <Carousel.Caption>
             {/* <h3>Third slide label</h3>
