@@ -1,139 +1,29 @@
-body {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 .navbar {
+	height: 3.8em;
 	width: 100vw;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	background-color: #f23827;
-	color: #f2f1df;
 	position: fixed;
 	z-index: 10;
 }
 
-.brand-title {
-	font-size: 1.5rem;
-	font-family: 'Abril Fatface', cursive;
+.wrapper {
+	margin-left: 75px;
 }
 
-.navbar-links ul {
-	margin: inherit;
-	padding: inherit;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+.nav {
+	margin-left: 450px;
+	position: relative;
 }
 
-.navbar-links ul li {
-	list-style: none;
-	font-family: 'Abril Fatface', cursive;
+.nav-title {
+	font-family: Abril Fatface;
+	position: relative;
+	padding-left: 50px;
+	top: 3px;
 }
 
-.navbar-links li a {
-	text-decoration: none;
-	color: #f2f1df;
-	padding: 1rem;
-	display: block;
-}
-
-.navbar-links ul li:hover {
-	background-color: #f2695c;
-	border-radius: 5px;
-}
-
-img {
-	width: 3.4rem;
-	border-radius: 20px;
-}
-
-.logo-container {
-	display: flex;
-}
-
-.menu-drop {
-	background-color: #f23827;
-	font-family: 'Abril Fatface', cursive;
-	color: #f2f1df;
-}
-
-.menu-item {
-	background-color: inherit;
-	color: inherit;
-}
-/* 
-.btn-primary {
-	color: #f2f1df;
-	background-color: #f23827;
-	border-color: #f23827;
-	font-family: 'Abril Fatface', cursive;
-	display: none;
-} */
-
-.toogle {
-	display: none;
-}
-
-@media (max-width: 700px) {
-	.toogle {
-		display: inline-block;
-	}
-
-	.navbar-links {
-		display: none;
-	}
-
-	.navbar {
-		flex-direction: row;
-		align-items: flex-start;
-		justify-content: space-between;
-	}
-
-	.logo-container {
-		display: flex;
-		margin-left: 40%;
-		border-radius: 25px;
-	}
-
-	.brand-title {
-		display: none;
-	}
-	.menu {
-		display: flex;
-		background-color: #f23827;
-		color: #f2f1df;
-		border-radius: 10px;
-	}
-	/* .btn-check:focus + .btn-primary,
-	.btn-primary:focus,
-	.btn-check:active + .btn-primary:focus,
-	.btn-check:checked + .btn-primary:focus,
-	.btn-primary:active:focus,
-	.show > .btn-primary.dropdown-toggle:focus,
-	.btn-check:active + .btn-primary,
-	.btn-check:checked + .btn-primary,
-	.btn-primary:active,
-	.show > .btn-primary.dropdown-toggle,
-	.btn-check:active + .btn-primary,
-	.btn-check:checked + .btn-primary,
-	.btn-primary.active,
-	.show > .btn-primary.dropdown-toggle,
-	.btn-primary:hover {
-		color: #f2f1df;
-		background-color: #f23827;
-		border-color: #f23827;
-		box-shadow: none;
-		border-radius: 10px;
-	}
-	.btn-primary:hover,
-	.btn-check:active + .btn-primary,
-	.btn-check:checked + .btn-primary,
-	.btn-primary:active:focus,
-	.show > .btn-primary.dropdown-toggle:focus {
-		background-color: #f2695c;
-		border-radius: 10px;
-	} */
+.logo {
+	max-height: 3.2em;
+	border-radius: 25%;
+	margin-left: -2.3em;
 }

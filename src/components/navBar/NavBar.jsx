@@ -1,36 +1,38 @@
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import logo from '../../assets/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './navbar.css';
 
-import Dropdown from 'react-bootstrap/Dropdown';
-
-import './navBar.css';
-import logo from './logo.png';
-
-export default function Header() {
+const NavBar = () => {
 	return (
-		<header class="navbar">
-			<h1 class="brand-title">Pizzeria Don Remolo</h1>
-			<div className="logo-container">
-				<img src={logo} alt="Logo" />
-			</div>
-			<nav class="navbar-links">
-				<ul>
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li>
-						<a href="#">Menú</a>
-					</li>
-					<li>
-						<a href="#">Cart</a>
-					</li>
-					<li>
-						<a href="#">About Us</a>
-					</li>
-				</ul>
-			</nav>
+		<Navbar variant="dark" className="header">
+			<Container className="navbar">
+				<div className="wrapper">
+					<img
+						src={logo}
+						alt="don remolo"
+						className="logo"
+					/>
 
-			{/* llevar a otros componente */}
-			<Dropdown variant="warning" className="toogle">
+					<Navbar.Brand href="#home" className="nav-title">
+						Pizzeria Don Remolo
+					</Navbar.Brand>
+				</div>
+				<Nav className="me-auto nav">
+					<Nav.Link href="#home">Home</Nav.Link>
+					<Nav.Link href="#menu">Menu</Nav.Link>
+					<Nav.Link href="#card">Card</Nav.Link>
+					<Nav.Link href="#faq">F.A.Q</Nav.Link>
+					<Nav.Link href="#contact">Contact us</Nav.Link>
+				</Nav>
+			</Container>
+		</Navbar>
+	);
+};
+
+export default NavBar;
+
+/* <Dropdown variant="warning" className="toogle">
 				<Dropdown.Toggle className="menu">
 					Menu
 				</Dropdown.Toggle>
@@ -61,7 +63,32 @@ export default function Header() {
 						About us
 					</Dropdown.Item>
 				</Dropdown.Menu>
-			</Dropdown>
-		</header>
-	);
-}
+			</Dropdown> */
+
+/* <Container className="navbar">
+				<Row>
+					<Col xs>
+						<img
+							src={logo}
+							alt="don remolo"
+							className="logo"
+						/>
+					</Col>
+					<Col xs={{ order: 12 }}>
+						<Navbar.Brand href="#home">
+							Pizzeria Don Remolo
+						</Navbar.Brand>
+					</Col>
+					<Col xs={{ order: 1 }}>
+						<Nav className="me-auto hola">
+							<Nav.Link href="#home">Home</Nav.Link>
+							<Nav.Link href="#menu">Menu</Nav.Link>
+							<Nav.Link href="#card">Card</Nav.Link>
+							<Nav.Link href="#faq">F.A.Q</Nav.Link>
+							<Nav.Link href="#contact">
+								Contact us
+							</Nav.Link>
+						</Nav>
+					</Col>
+				</Row>
+			</Container> */
