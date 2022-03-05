@@ -2,8 +2,6 @@
 	height: 3.8em;
 	width: 100vw;
 	background-color: #f23827;
-	position: fixed;
-	z-index: 10;
 }
 
 .wrapper {
@@ -11,7 +9,7 @@
 }
 
 .nav {
-	margin-left: 450px;
+	margin-left: 250px;
 	position: relative;
 }
 
@@ -19,11 +17,42 @@
 	font-family: Abril Fatface;
 	position: relative;
 	padding-left: 50px;
-	top: 3px;
+	bottom: auto;
 }
 
 .logo {
+	position: relative;
+	top: auto;
 	max-height: 3.2em;
 	border-radius: 25%;
 	margin-left: -2.3em;
+}
+
+.toogle-menu,
+.cart {
+	display: none;
+}
+
+@media (max-width: 960px) {
+	.navbar {
+		display: flex;
+		justify-content: center;
+	}
+	.nav,
+	.nav-title {
+		display: none;
+	}
+	.wrapper {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.toogle-menu,
+	.cart {
+		display: inline;
+	}
+
+	.cart {
+		color: #efefef;
+		transform: rotateY(180deg);
+	}
 }
