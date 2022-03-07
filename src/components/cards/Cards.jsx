@@ -1,22 +1,20 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-
 import carousel2 from "./carousel2.png";
+import './card.css'
 
 const Cards = () => {
   return (
-    <div className="d-flex flex-column">
-      <Card className="carta">
+    <div className="cardbody d-flex flex-column mb-5">
+      <Card>
         <Card.Img src={carousel2} />
-        <Card.Body className="d-flex flex-column align-items-center cardbody">
-          <Card.Title>Pizza Napolitana</Card.Title>
-          <Card.Text>$850 - 8 porc</Card.Text>
-          <Card.Text>$500 - 4 porc</Card.Text>
+        <Card.Body>
+          <Card.Title className="text-center">Pizza Napolitana</Card.Title>
+          <Card.Text className="text-center">$850 - 8 porc</Card.Text>
+          <Card.Text className="text-center">$500 - 4 porc</Card.Text>
+          <Button className="w-100" variant="danger">Add to Cart</Button>
         </Card.Body>
-        <Button variant="danger">Add to Cart</Button>
       </Card>
     </div>
   );
