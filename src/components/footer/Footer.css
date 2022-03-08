@@ -1,20 +1,25 @@
 .footer {
-	position: relative;
-	top: 55px;
-	background-color: #f23827;
-	color: #f2f1df;
-	font-family: 'Abril Fatface', cursive;
-	padding-top: 20px;
-	padding-bottom: 20px;
+  position: relative;
+  top: 55px;
+  background-color: #f23827;
+  color: #f2f1df;
+  font-family: "Abril Fatface", cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .text-footer {
-	text-align: center;
-	display: flex;
-	align-items: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 .icons {
-	color: #f2f1df;
+  color: #f2f1df;
 }
 .icon {
-	padding: 5px;
+  padding: 5px;
+}
+
+.col-sm img {
+  max-height: 3.2em;
+  border-radius: 25%;
 }

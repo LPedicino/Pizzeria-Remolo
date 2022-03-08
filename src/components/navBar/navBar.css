@@ -1,58 +1,58 @@
 .navbar {
-	height: 3.8em;
-	width: 100vw;
-	background-color: #f23827;
+  height: 3.8em;
+  width: 100vw;
+  background-color: #f23827;
 }
 
 .wrapper {
-	margin-left: 75px;
+  margin-left: 75px;
 }
 
 .nav {
-	margin-left: 250px;
-	position: relative;
+  margin-left: 250px;
+  position: relative;
 }
 
 .nav-title {
-	font-family: Abril Fatface;
-	position: relative;
-	padding-left: 50px;
-	bottom: auto;
+  font-family: Abril Fatface;
+  position: relative;
+  padding-left: 50px;
+  bottom: auto;
 }
 
 .logo {
-	position: relative;
-	top: auto;
-	max-height: 3.2em;
-	border-radius: 25%;
-	margin-left: -2.3em;
+  position: relative;
+  top: auto;
+  max-height: 3.2em;
+  border-radius: 25%;
+  margin-left: -2.3em;
 }
 
 .toogle-menu,
 .cart {
-	display: none;
+  display: none;
 }
 
 @media (max-width: 960px) {
-	.navbar {
-		display: flex;
-		justify-content: center;
-	}
-	.nav,
-	.nav-title {
-		display: none;
-	}
-	.wrapper {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.toogle-menu,
-	.cart {
-		display: inline;
-	}
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  .nav,
+  .nav-title {
+    display: none;
+  }
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .toogle-menu,
+  .cart {
+    display: inline;
+  }
 
-	.cart {
-		color: #efefef;
-		transform: rotateY(180deg);
-	}
+  .cart {
+    color: #efefef;
+    transform: rotateY(180deg);
+  }
 }
