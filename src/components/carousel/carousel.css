@@ -1,14 +1,14 @@
 .carousel.slide {
-  height: 400px;
+  height: 25rem;
   width: 100%;
 }
 
 .carousel-item {
-  height: 400px;
+  height: 25rem;
 }
 
 .carousel.slide img {
-  object-fit: cover;
+  object-fit: fill;
   max-height: 100%;
 }
 
