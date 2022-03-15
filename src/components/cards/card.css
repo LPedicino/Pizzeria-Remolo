@@ -12,6 +12,10 @@
   max-width: 350px;
 }
 
+.card p {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .cardbody {
     display: flex;

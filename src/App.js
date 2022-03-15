@@ -4,6 +4,7 @@ import NavBar from "./components/navBar/NavBar";
 import Cards from "./components/cards/Cards.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Confirmation from "./pages/Confirmation";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <br />
         <h1 className="text-center"> Lo mas Pedido !</h1>
         <br />
-        <div className="cardbody">
+        <div className="cardbody flex-wrap">
           <Cards />
           <Cards />
           <Cards />
@@ -26,6 +27,7 @@ function App() {
         </div>
       </header>
       <br />
+      {/* <Confirmation /> */}
       <div>
         <Footer />
       </div>

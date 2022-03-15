@@ -1,9 +1,0 @@
-.carta {
-  width: 200rem;
-  background-color: black;
-}
-@media (max-width: 700px) {
-  .cardbody {
-    flex-direction: column !important;
-  }
-}
