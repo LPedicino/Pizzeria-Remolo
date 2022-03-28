@@ -1,7 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+<<<<<<< HEAD
 import carousel2 from "./carousel2.png";
+=======
+import carousel2 from "../../assets/carousel2.png";
+>>>>>>> dante_develop
 import { useState } from "react";
 import "./card.css";
 
