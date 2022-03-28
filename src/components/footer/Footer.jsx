@@ -1,6 +1,6 @@
 import React from "react";
-import "./footer.css";
-import logo from "./logo.png";
+import "./Footer.css";
+import logo from "../../assets/logo.png";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,7 +9,7 @@ import {
   faWhatsappSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <Container fluid className="footer">
       <Row className="text-footer">
@@ -40,4 +40,5 @@ export default function Footer() {
       </Row>
     </Container>
   );
-}
+};
+export default Footer;

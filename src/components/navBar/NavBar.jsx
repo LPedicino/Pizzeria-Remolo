@@ -1,50 +1,44 @@
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
+import logo from "../../assets/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import Dropdown from "react-bootstrap/Dropdown";
-
 import "./navBar.css";
-import logo from "./logo.png";
 
-export default function Header() {
+//
+const NavBar = () => {
   return (
-    <>
-      <nav class="navbar">
-        <div class="brand-title">Pizzeria Don Remolo</div>
-        <div className="logo-container">
-          <img src={logo} alt="Logo" />
+    <Navbar fixed="top" variant="dark" className="header">
+      <Container className="navbar">
+        <NavDropdown className="toogle-menu" menuVariant="dark">
+          <NavDropdown.Item href="#home">Home</NavDropdown.Item>
+          <NavDropdown.Item href="#Menu">Menu</NavDropdown.Item>
+          <NavDropdown.Item href="#Card">Card</NavDropdown.Item>
+          <NavDropdown.Item href="#faq">F.A.Q</NavDropdown.Item>
+          <NavDropdown.Item href="#contact">Contact</NavDropdown.Item>
+        </NavDropdown>
+        <div className="wrapper">
+          <img src={logo} alt="don remolo" className="logo" />
+          <Navbar.Brand href="#home" className="nav-title">
+            Pizzeria Don Remolo
+          </Navbar.Brand>
         </div>
-        <div class="navbar-links">
-          <ul>
-            <li>
-              <a href="../../../public/index.html">Menú</a>
-            </li>
-            <li>
-              <a href="../../../public/index.html">Cart</a>
-            </li>
-            <li>
-              <a href="../../../public/index.html">About Us</a>
-            </li>
-          </ul>
-        </div>
-        <Dropdown variant="warning">
-          <Dropdown.Toggle className="menu">Menu</Dropdown.Toggle>
-
-          <Dropdown.Menu className="menu-drop">
-            <Dropdown.Item className="menu-item" href="#/action-1">
-              Home
-            </Dropdown.Item>
-            <Dropdown.Item className="menu-item" href="#/action-2">
-              Menú
-            </Dropdown.Item>
-            <Dropdown.Item className="menu-item" href="#/action-3">
-              Cart
-            </Dropdown.Item>
-            <Dropdown.Item className="menu-item" href="#/action-4">
-              About us
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </nav>
-    </>
+        <Nav className="me-auto nav">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#menu">Menu</Nav.Link>
+          <Nav.Link href="#card">Card</Nav.Link>
+          <Nav.Link href="#faq">F.A.Q</Nav.Link>
+          <Nav.Link href="#contact">Contact us</Nav.Link>
+        </Nav>
+        <FontAwesomeIcon
+          className="cart"
+          icon={faCartShopping}
+          size="2x"
+        ></FontAwesomeIcon>
+      </Container>
+    </Navbar>
   );
-}
+};
+
+export default NavBar;
