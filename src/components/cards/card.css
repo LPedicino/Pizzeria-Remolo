@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -10,6 +11,7 @@
   -moz-box-shadow: 1px 15px 25px 0px rgba(0, 0, 0, 0.3);
   width: 18rem;
   max-width: 350px;
+  margin: 1rem;
 }
 
 .card p {
@@ -20,6 +22,7 @@
   .cardbody {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap !important;
   }
 
   .card {

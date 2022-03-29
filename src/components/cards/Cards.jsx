@@ -1,11 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-<<<<<<< HEAD
-import carousel2 from "./carousel2.png";
-=======
 import carousel2 from "../../assets/carousel2.png";
->>>>>>> dante_develop
 import { useState } from "react";
 import "./card.css";
 
@@ -41,7 +37,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="cardbody d-flex flex-column mb-5">
+    <div className=" d-flex flex-column mb-5">
       <Card>
         <Card.Img src={carousel2} />
         <Card.Body>

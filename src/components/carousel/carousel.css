@@ -15,6 +15,7 @@
 @media (max-width: 768px) {
   .carousel {
     top: 3.4em;
+    display: block !important;
   }
   .carousel.slide {
     height: 250px;
@@ -22,6 +23,7 @@
   }
   .carousel-item {
     height: 250px;
+    width: 100%;
   }
   .carousel.slide img {
     width: 100%;

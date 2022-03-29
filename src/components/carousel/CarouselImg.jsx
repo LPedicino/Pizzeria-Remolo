@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import "./carousel.css";
+// import "./carousel.css";
 import carousel1 from "../../assets/pizzas.png";
 import carousel2 from "../../assets/empanadas.png";
 import carousel3 from "../../assets/bebidas.png";
@@ -14,7 +14,7 @@ import carousel4 from "../../assets/postres.png";
 
 const CarouselImg = () => {
   return (
-    <Carousel className="carousel">
+    <Carousel>
       <Carousel.Item>
         <img className="d-block w-100" src={carousel1} alt="First slide" />
         <Carousel.Caption>

@@ -1,10 +1,6 @@
 import React from "react";
 import "./Footer.css";
-<<<<<<< HEAD
-import logo from "./logo.png";
-=======
 import logo from "../../assets/logo.png";
->>>>>>> dante_develop
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
