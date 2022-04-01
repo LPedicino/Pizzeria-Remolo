@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home/Home";
 import Cart from "../src/pages/Cart/Cart";
 import NavBar from "../src/components/navBar/NavBar";
+import Footer from "../src/components/footer/Footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+
+      <Footer />
 
     </BrowserRouter>
     </CartContextProvider>
