@@ -1,24 +1,25 @@
 import CarouselImg from "../../components/carousel/CarouselImg";
-import Footer from "../../components/footer/Footer";
-import NavBar from "../../components/navBar/NavBar";
 import Cards from "../../components/cards/Cards";
+import useFetchData from "../../hooks/useFetchData";
+import Footer from "../../components/footer/Footer";
 
-const App = () => {
+const Home = () => {
+  const { data, loading } = useFetchData();
+
+  console.log(loading);
+
   return (
-    <div className="App">
-      <header className="App-header mb-5">
-        <NavBar />
-      </header>
-
+    <div className="pt-5">
       <CarouselImg />
 
       <h3 className="fw-bold fs-1 text-center p-4">Pizzas</h3>
 
       <div className="cardbody">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        {
+        data.map((data) => (
+          <Cards key={data._id} data={data} />
+        ))
+        }
       </div>
 
       <Footer />
@@ -26,4 +27,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

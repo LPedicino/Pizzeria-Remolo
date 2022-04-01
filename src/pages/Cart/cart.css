@@ -1,0 +1,147 @@
+.confirmation {
+    padding-bottom: 3rem;    
+}
+
+.confirmation h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.confirmation a {
+  text-decoration: none;
+  color: #fff;
+  padding: .8rem 3rem;
+  background-color: #ec4a26;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation a:hover{
+  background-color: #ff6d4d;
+
+}
+
+.pt-6{
+  padding-top: 6rem;
+}
+
+.confirmation-container {
+  padding: 3rem;
+  padding-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: 1px 2px 14px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 2px 14px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 14px 2px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.confirmation-grid {
+  height: 50%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.confirmation-description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.confirmation-description span {
+  display: block;
+  text-align: center;
+}
+
+.input-number {
+  display: block;
+  margin: 0 auto;
+  width: 5rem;
+  padding: 10px;
+  border: 2px solid #2222;
+  outline: none;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.precio p{
+    text-align: center;
+}
+
+.checkout-totalprice{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;   
+    justify-content: center;
+    
+}
+
+.checkout-totalprice h3{
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.checkout-totalprice p{
+    grid-column: 3/4;
+    text-align: center;
+}
+
+.inputs-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  row-gap: 2rem;
+}
+
+@media (max-width:700px){
+  .inputs-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputs-container div{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-container div label{
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.inputs-container div input{
+  padding: .5rem;
+  border: 2px solid #2222;
+  border-radius: 8px;
+}
+
+
+.inputs-container button{
+  cursor: pointer;
+  width: 95%;
+  border-radius: 10px;
+  margin: 0 auto;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.5rem;
+}
+
+.inputs-container button:hover{
+  background-color: #ec4a26;
+  color: #fff;
+}
+
+.inputs-container .on-cancel{
+  background-color: #cabcbb;
+  color: #303030;
+}
+
+.inputs-container .on-confirm{
+  background-color: #F23827;
+}

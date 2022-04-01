@@ -1,10 +1,10 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-// import "./carousel.css";
 import carousel1 from "../../assets/pizzas.png";
 import carousel2 from "../../assets/empanadas.png";
 import carousel3 from "../../assets/bebidas.png";
 import carousel4 from "../../assets/postres.png";
+
 /*
   colocar los Carousel.Item en un componente aparte
   {
