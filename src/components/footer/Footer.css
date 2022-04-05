@@ -4,7 +4,8 @@
   font-family: "Abril Fatface", cursive;
   padding-top: 20px;
   padding-bottom: 20px;
-
+  position: static;
+  bottom: 0;
 }
 .text-footer {
   text-align: center;

@@ -11,22 +11,7 @@ import { CartContex } from "../../Context/CartContex";
 const Cards = ({data}) => {
 
   // console.log(data)
-
   const {_id, nombre, precio, descripcion} = data;
-
-  // const producto = {
-  //   id: 1,
-  //   name: "Pizza Napolitana",
-  //   pizzaGrandeInfo: {
-  //     precioGrande: 120,
-  //     porcionesGrande: 8,
-  //   },
-  // };
-
-   // const {
-  //   name,
-  //   pizzaGrandeInfo: { precioGrande, porcionesGrande },
-  // } = producto;
 
   const { onAddToCart } = useContext(CartContex);
 
@@ -36,8 +21,10 @@ const Cards = ({data}) => {
     if (cant === 0) return;
     
     const objPedido = {
+      id: _id,
       nombrePedido: nombre,
       cant: cant,
+      precio: precio
     };
 
     onAddToCart(objPedido);
@@ -50,9 +37,14 @@ const Cards = ({data}) => {
         <Card.Img src={carousel2} />
 
         <Card.Body>
-          <Card.Title className="text-center">{nombre}</Card.Title>
+          <Card.Title className="fw-bold text-center">{nombre}</Card.Title>
+          
+          <Card.Text className="mt-3 mb-3 text-center">
+            {descripcion}
+          </Card.Text>
+          
           <Card.Text className="mb-2 text-center">
-            {precio}$ - {'8'} Porc.
+            <span className="text-danger fw-bold">{precio}$</span> - {'8'} Porc.
           </Card.Text>
 
           <div className="d-flex align-items-center justify-content-evenly mt-3 mb-3">

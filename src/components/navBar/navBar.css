@@ -5,6 +5,38 @@
   justify-content: space-evenly;
 }
 
+a {
+  color: #b63f32;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.mobile a{
+  text-align: center;
+  color: #b63f32;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+a:hover {
+  color: #efefef;
+}
+
+.active_link {
+  text-decoration: none;
+  color: #efefef;
+  font-weight: bold;
+}
+
+.mobile .active_link{
+  color: #efefef;
+
+  text-align: center;
+  font-size: 2rem;
+}
+
 .navbar h6 {
   margin: 0;
   color: #efefef;
@@ -15,6 +47,9 @@
   border-radius: 20%;
 }
 
+.offcanvas-start {
+  border: none;
+}
 
 .navbar-light .navbar-toggler {
   display: none;
@@ -22,7 +57,7 @@
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url('./hamburger-menu-svgrepo-com.svg');
+  background-image: url("./hamburger-menu-svgrepo-com.svg");
 }
 
 .offcanvas {
@@ -58,7 +93,7 @@
   font-weight: bold;
 }
 
-.cart-box .cart-bubble span{
+.cart-box .cart-bubble span {
   font-size: 13px;
 }
 
@@ -97,12 +132,13 @@
   font-weight: bold;
 }
 
-.nav-links-desktop li {
-  list-style: none;
-  padding: 0 2.5rem;
-  color: #f2f1df;
+.nav-links-desktop {
+  flex-direction: row;
 }
 
+.logo-titulo h6{
+  font-family: "Abril Fatface", cursive;
+}
 
 @media (max-width: 990px) {
   .navbar {

@@ -5,13 +5,13 @@ import { CartContex } from "../../Context/CartContex";
 import { useContext } from "react";
 
 const Cart = () => {
-  
   const { cartItems } = useContext(CartContex);
+  console.log(cartItems);
 
   return (
-    <div className="confirmation pt-6">
+    <div className="cart_page pt-6">
       <h2>Vista de tu pedido</h2>
-      <div className="confirmation-container">
+      <div className="cart_page-container">
         {cartItems.length === 0 ? (
           <div className="d-flex flex-column justify-content-center align-items-center">
             <p>No hay productos agregados</p>
@@ -19,69 +19,38 @@ const Cart = () => {
           </div>
         ) : (
           <div>
-            <div className="confirmation-grid">
-              <div className="confirmation-description">
+            {cartItems.map((element) => console.log(element))}
+            <div className="cart_page-grid">
+              <div className="cart_page-description">
                 <span>Descripcion</span>
-                <p>Pizza Jamon y Morron</p>
-                <p>Empanada J y Q</p>
-                <p>Helado</p>
-                <p>Cerveza</p>
-                <p>Coca-Cola</p>
+                {cartItems.map((element) => (
+                  <p key={element.id}>{element.nombrePedido}</p>
+                ))}
               </div>
 
-              <div className="confirmation-description ">
+              <div className="cart_page-description ">
                 <span>Cant.</span>
-                <input
-                  className="input-number"
-                  value={0}
-                  type="number"
-                  name=""
-                  id=""
-                  readOnly
-                />
-                <input
-                  className="input-number"
-                  value={0}
-                  type="number"
-                  name=""
-                  id=""
-                  readOnly
-                />
-                <input
-                  className="input-number"
-                  value={0}
-                  type="number"
-                  name=""
-                  id=""
-                  readOnly
-                />
-                <input
-                  className="input-number"
-                  value={0}
-                  type="number"
-                  name=""
-                  id=""
-                  readOnly
-                />
-                <input
-                  className="input-number"
-                  value={0}
-                  type="number"
-                  name=""
-                  id=""
-                  readOnly
-                />
+                {cartItems.map((element) => (
+                  <input
+                    key={element.id}
+                    className="input-number text-center"
+                    value={element.cant}
+                    type="number"
+                    name=""
+                    id=""
+                    readOnly
+                  />
+                ))}
               </div>
 
-              <div className="confirmation-description precio">
+              <div className="cart_page-description precio">
                 <span>Precio</span>
-                <p>$99</p>
-                <p>$99</p>
-                <p>$99</p>
-                <p>$99</p>
-                <p>$99</p>
+                {cartItems.map((element) => (
+                  <p key={element.id}>${element.precio}</p>
+                ))}
               </div>
             </div>
+            
             <div className="checkout">
               <div className="checkout-totalprice">
                 <h3>Total a pagar</h3>
@@ -110,7 +79,7 @@ const Cart = () => {
                 <Link to="/" className="on-cancel text-center">
                   Back
                 </Link>
-                <Link to="/" className="on-confirm text-center">
+                <Link to="/confirm" className="on-confirm text-center">
                   Confirm
                 </Link>
               </div>

@@ -14,7 +14,7 @@ import carousel4 from "../../assets/postres.png";
 
 const CarouselImg = () => {
   return (
-    <Carousel>
+    <Carousel className="shadow">
       <Carousel.Item>
         <img className="d-block w-100" src={carousel1} alt="First slide" />
         <Carousel.Caption>

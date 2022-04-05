@@ -1,32 +1,32 @@
-.confirmation {
-    padding-bottom: 3rem;    
+.cart_page {
+  height: calc(100vh - 3.8em);
+  padding-bottom: 3rem;
 }
 
-.confirmation h2 {
+.cart_page h2 {
   text-align: center;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
-.confirmation a {
+.cart_page a {
   text-decoration: none;
   color: #fff;
-  padding: .8rem 3rem;
+  padding: 0.8rem 3rem;
   background-color: #ec4a26;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.confirmation a:hover{
+.cart_page a:hover {
   background-color: #ff6d4d;
-
 }
 
-.pt-6{
+.pt-6 {
   padding-top: 6rem;
 }
 
-.confirmation-container {
+.cart_page-container {
   padding: 3rem;
   padding-bottom: 2rem;
   border-radius: 20px;
@@ -40,14 +40,14 @@
   justify-content: space-between;
 }
 
-.confirmation-grid {
+.cart_page-grid {
   height: 50%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   margin-bottom: 1rem;
 }
 
-.confirmation-description {
+.cart_page-description {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
   gap: 1rem;
 }
 
-.confirmation-description span {
+.cart_page-description span {
   display: block;
   text-align: center;
 }
@@ -71,58 +71,56 @@
   background-color: #fff;
 }
 
-.precio p{
-    text-align: center;
+.precio p {
+  text-align: center;
 }
 
-.checkout-totalprice{
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;   
-    justify-content: center;
-    
+.checkout-totalprice {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  justify-content: center;
 }
 
-.checkout-totalprice h3{
-    grid-column: 2/3;
-    text-align: center;
+.checkout-totalprice h3 {
+  grid-column: 2/3;
+  text-align: center;
 }
 
-.checkout-totalprice p{
-    grid-column: 3/4;
-    text-align: center;
+.checkout-totalprice p {
+  grid-column: 3/4;
+  text-align: center;
 }
 
-.inputs-container{
+.inputs-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
   row-gap: 2rem;
 }
 
-@media (max-width:700px){
-  .inputs-container{
+@media (max-width: 700px) {
+  .inputs-container {
     grid-template-columns: 1fr;
   }
 }
 
-.inputs-container div{
+.inputs-container div {
   display: flex;
   flex-direction: column;
 }
 
-.inputs-container div label{
+.inputs-container div label {
   font-weight: bold;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.inputs-container div input{
-  padding: .5rem;
+.inputs-container div input {
+  padding: 0.5rem;
   border: 2px solid #2222;
   border-radius: 8px;
 }
 
-
-.inputs-container button{
+.inputs-container button {
   cursor: pointer;
   width: 95%;
   border-radius: 10px;
@@ -132,16 +130,16 @@
   padding: 1rem 2.5rem;
 }
 
-.inputs-container button:hover{
+.inputs-container button:hover {
   background-color: #ec4a26;
   color: #fff;
 }
 
-.inputs-container .on-cancel{
+.inputs-container .on-cancel {
   background-color: #cabcbb;
   color: #303030;
 }
 
-.inputs-container .on-confirm{
-  background-color: #F23827;
+.inputs-container .on-confirm {
+  background-color: #f23827;
 }
