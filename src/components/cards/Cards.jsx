@@ -1,6 +1,4 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
@@ -18,7 +16,6 @@ const Cards = () => {
           <Card.Text>$850 - 8 porc</Card.Text>
           <Card.Text>$500 - 4 porc</Card.Text>
         </Card.Body>
-        <Button variant="danger">Add to Cart</Button>
       </Card>
     </section>
   );
