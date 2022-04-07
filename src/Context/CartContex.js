@@ -11,11 +11,18 @@ const CartContextProvider = (props) => {
     setCartItems([...cartItems, item]);
   };
 
+  // Elimina items del carrito
+  const onRemoveToCart = (id) => {
+    const itemsFiltered = cartItems.filter(element => element.id !== id)
+    setCartItems(itemsFiltered)
+  }
+
   return (
     <CartContex.Provider
       value={{
         cartItems,
         onAddToCart,
+        onRemoveToCart
       }}
     >
       {props.children}

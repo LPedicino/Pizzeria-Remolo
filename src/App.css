@@ -7,3 +7,23 @@
 body {
   background-color: #f2f1df;
 }
+
+input:focus{
+  outline: none;
+}
+
+/* .product-category-container{
+  margin-bottom: 5rem;
+} */
+
+.product-category-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2rem;
+}

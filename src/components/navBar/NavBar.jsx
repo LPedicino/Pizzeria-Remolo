@@ -66,7 +66,12 @@ const NavBar = () => {
 
         <Nav className="d-flex gap-5 px-5 nav-links-desktop">
           <CustomLink text="Home" to="/" />
-          <CustomLink text="Cart" to="/Cart" />
+          <div className="cart-bubble-desktop-container">
+            <CustomLink text="Cart" to="/Cart" />
+            {cartItems.length > 0 && (
+              <span className="cart-bubble-desktop">{cartItems.length}</span>
+            )}
+          </div>
           <CustomLink text="Contact" to="/Contact" />
         </Nav>
       </Container>

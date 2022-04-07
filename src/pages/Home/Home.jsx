@@ -1,17 +1,21 @@
 import CarouselImg from "../../components/carousel/CarouselImg";
-import Cards from "../../components/cards/Cards";
 import useFetchData from "../../hooks/useFetchData";
 import Spinner from "../../components/spinner/Spinner";
 import Footer from "../../components/footer/Footer";
+import ProductCategory from "../../components/productCategory/ProductCategory";
 
 const Home = () => {
-  const { data, loading } = useFetchData();
+  const {
+    pizzasCategory,
+    postresCategory,
+    bebidasCategory,
+    empanadasCategory,
+    loading,
+  } = useFetchData();
 
   return (
-    <div className="pt-5 ">
+    <div className="pt-5">
       <CarouselImg />
-
-      <h3 className="fw-bold fs-1 text-center p-4">Pizzas</h3>
 
       <div className="cardbody min-vh-100">
         {loading ? (
@@ -19,7 +23,27 @@ const Home = () => {
             <Spinner />
           </div>
         ) : (
-          data.map((data) => <Cards key={data._id} data={data} />)
+          <>
+            <ProductCategory 
+              textCategory="Pizzas" 
+              category={pizzasCategory} 
+            />
+
+            <ProductCategory
+              textCategory="Empanadas"
+              category={empanadasCategory}
+            />
+
+            <ProductCategory
+              textCategory="Postres"
+              category={postresCategory}
+            />
+
+            <ProductCategory
+              textCategory="Bebidas"
+              category={bebidasCategory}
+            />
+          </>
         )}
       </div>
 

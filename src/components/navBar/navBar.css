@@ -12,7 +12,7 @@ a {
   font-size: 18px;
 }
 
-.mobile a{
+.mobile a {
   text-align: center;
   color: #b63f32;
   font-weight: bold;
@@ -30,7 +30,7 @@ a:hover {
   font-weight: bold;
 }
 
-.mobile .active_link{
+.mobile .active_link {
   color: #efefef;
 
   text-align: center;
@@ -97,6 +97,25 @@ a:hover {
   font-size: 13px;
 }
 
+.cart-bubble-desktop-container {
+  position: relative;
+}
+
+.cart-bubble-desktop {
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  border-radius: 20px;
+  top: -3px;
+  right: -15px;
+  border: 1px solid #f23827;
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
 .wrapper {
   margin-left: 75px;
 }
@@ -136,7 +155,7 @@ a:hover {
   flex-direction: row;
 }
 
-.logo-titulo h6{
+.logo-titulo h6 {
   font-family: "Abril Fatface", cursive;
 }
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchData } from "../helpers/fetchData";
 
 export const useFetchData = () => {
+  
   const [state, setState] = useState({
     data: [],
     loading: true,
@@ -9,16 +10,41 @@ export const useFetchData = () => {
 
   useEffect(() => {
     fetchData().then((data) => {
-    // console.log(data)
+      // console.log(data)
       setState({
         data: data,
         loading: false,
-      })
-    }
-    );
+      });
+    });
   }, []);
 
-  return state; // { data: [], loading: true }
+
+  const pizzasCategory = state.data.filter(
+    (element) => element.categoria.nombre.toLowerCase() === "pizzas"
+  );
+
+  const postresCategory = state.data.filter(
+    (element) => element.categoria.nombre.toLowerCase() === "postres"
+  );
+
+  const bebidasCategory = state.data.filter(
+    (element) => element.categoria.nombre.toLowerCase() === "bebidas"
+  );
+
+  const empanadasCategory = state.data.filter(
+    (element) => element.categoria.nombre.toLowerCase() === "empanadas"
+  );
+
+  const {loading} = state
+
+  return {
+    state,
+    pizzasCategory,
+    postresCategory,
+    bebidasCategory,
+    empanadasCategory,
+    loading
+  }; // { data: [], loading: true }
 };
 
 export default useFetchData;
