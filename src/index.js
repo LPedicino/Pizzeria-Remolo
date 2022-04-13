@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
-import DataClient from './components/dataclient/DataClient.js'
+import App from './App';
+import SSRProvider from 'react-bootstrap/SSRProvider';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <DataClient />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<SSRProvider>
+		<React.StrictMode>
+			<App />
+		</React.StrictMode>
+	</SSRProvider>,
+	document.getElementById('root')
 );
-

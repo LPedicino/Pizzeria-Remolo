@@ -1,0 +1,33 @@
+.cardbody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: 1px 15px 25px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 15px 25px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 15px 25px 0px rgba(0, 0, 0, 0.3);
+  width: 18rem;
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cardbody {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap !important;
+  }
+
+  .card {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+}

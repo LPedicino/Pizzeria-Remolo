@@ -6,10 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
 
-### `npm i or npm install`
-
-Will install all the dependencies inside the .gitignore file
+Install all the depenendencies and node_modules folder
 
 ### `npm start`
 
