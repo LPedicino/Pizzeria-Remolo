@@ -1,41 +1,74 @@
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import logo from "../../assets/logo.png";
+import "./navBar.css";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import logo from "../../assets/logo.png";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./navBar.css";
+import { Link } from "react-router-dom";
+import { CartContex } from "../../Context/CartContex";
+import { useContext } from "react";
+import CustomLink from "./CustomLink";
 
-//
 const NavBar = () => {
+  const { cartItems } = useContext(CartContex);
+
   return (
-    <Navbar fixed="top" variant="dark" className="header">
-      <Container className="navbar">
-        <NavDropdown className="toogle-menu" menuVariant="dark">
-          <NavDropdown.Item href="#home">Home</NavDropdown.Item>
-          <NavDropdown.Item href="#Menu">Menu</NavDropdown.Item>
-          <NavDropdown.Item href="#Card">Card</NavDropdown.Item>
-          <NavDropdown.Item href="#faq">F.A.Q</NavDropdown.Item>
-          <NavDropdown.Item href="#contact">Contact</NavDropdown.Item>
-        </NavDropdown>
-        <div className="wrapper">
-          <img src={logo} alt="don remolo" className="logo" />
-          <Navbar.Brand href="#home" className="nav-title">
-            Pizzeria Don Remolo
-          </Navbar.Brand>
+    <Navbar fixed="top" expand={false}>
+      <Container fluid>
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Offcanvas
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="start"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title
+              className="fw-bold text-white"
+              id="offcanvasNavbarLabel"
+            >
+              Pizzeria Don Remolo
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="mobile d-flex flex-column gap-3 pe-3">
+              <CustomLink text="Home" to="/" />
+
+              <CustomLink text="Cart" to="/Cart" />
+
+              <CustomLink text="Contact" to="/Contact" />
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+
+        <Link to="/" className="navlink-logo">
+          <img src={logo} alt="" />
+        </Link>
+
+        <div className="logo-titulo">
+          <h6>Pizzeria Don Remolo</h6>
         </div>
-        <Nav className="me-auto nav">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#menu">Menu</Nav.Link>
-          <Nav.Link href="#card">Card</Nav.Link>
-          <Nav.Link href="#faq">F.A.Q</Nav.Link>
-          <Nav.Link href="#contact">Contact us</Nav.Link>
+
+        <Link to="/cart" className="cart-box">
+          <FontAwesomeIcon
+            className="cart"
+            icon={faCartShopping}
+          ></FontAwesomeIcon>
+
+          {cartItems.length > 0 && (
+            <div className="cart-bubble d-flex justify-content-center text-center align-items-center">
+              <span>{cartItems.length}</span>
+            </div>
+          )}
+        </Link>
+
+        <Nav className="d-flex gap-5 px-5 nav-links-desktop">
+          <CustomLink text="Home" to="/" />
+          <CustomLink text="Cart" to="/Cart" />
+          <CustomLink text="Contact" to="/Contact" />
         </Nav>
-        <FontAwesomeIcon
-          className="cart"
-          icon={faCartShopping}
-          size="2x"
-        ></FontAwesomeIcon>
       </Container>
     </Navbar>
   );

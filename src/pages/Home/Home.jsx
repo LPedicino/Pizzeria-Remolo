@@ -1,36 +1,31 @@
 import CarouselImg from "../../components/carousel/CarouselImg";
-import Footer from "../../components/footer/Footer";
-import NavBar from "../../components/navBar/NavBar";
 import Cards from "../../components/cards/Cards";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Home.css";
+import useFetchData from "../../hooks/useFetchData";
+import Spinner from "../../components/spinner/Spinner";
+import Footer from "../../components/footer/Footer";
 
-const App = () => {
+const Home = () => {
+  const { data, loading } = useFetchData();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="navigator">
-          <NavBar />
-        </div>
+    <div className="pt-5 ">
+      <CarouselImg />
 
-        <CarouselImg />
+      <h3 className="fw-bold fs-1 text-center p-4">Pizzas</h3>
 
-        <br />
-        <h3 className="text-center"> Lo mas Pedido !</h3>
-        <br />
-        <div className="cardbody">
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-        </div>
-      </header>
-      <br />
-      <div>
-        <Footer />
+      <div className="cardbody min-vh-100">
+        {loading ? (
+          <div className="container mx-auto d-flex align-items-center justify-content-center">
+            <Spinner />
+          </div>
+        ) : (
+          data.map((data) => <Cards key={data._id} data={data} />)
+        )}
       </div>
+
+      <Footer />
     </div>
   );
 };
 
-export default App;
+export default Home;

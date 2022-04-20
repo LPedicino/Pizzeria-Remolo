@@ -1,11 +1,11 @@
 .footer {
-  position: relative;
-  top: 55px;
   background-color: #f23827;
   color: #f2f1df;
   font-family: "Abril Fatface", cursive;
   padding-top: 20px;
   padding-bottom: 20px;
+  position: static;
+  bottom: 0;
 }
 .text-footer {
   text-align: center;

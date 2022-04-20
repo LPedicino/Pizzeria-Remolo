@@ -1,7 +1,100 @@
 .navbar {
   height: 3.8em;
-  width: 100vw;
+  width: 100%;
   background-color: #f23827;
+  justify-content: space-evenly;
+}
+
+a {
+  color: #b63f32;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.mobile a{
+  text-align: center;
+  color: #b63f32;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+a:hover {
+  color: #efefef;
+}
+
+.active_link {
+  text-decoration: none;
+  color: #efefef;
+  font-weight: bold;
+}
+
+.mobile .active_link{
+  color: #efefef;
+
+  text-align: center;
+  font-size: 2rem;
+}
+
+.navbar h6 {
+  margin: 0;
+  color: #efefef;
+  font-size: 1.2rem;
+}
+.navbar img {
+  width: 2.5rem;
+  border-radius: 20%;
+}
+
+.offcanvas-start {
+  border: none;
+}
+
+.navbar-light .navbar-toggler {
+  display: none;
+  border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("./hamburger-menu-svgrepo-com.svg");
+}
+
+.offcanvas {
+  max-width: 60%;
+  background-color: #d9411e;
+}
+
+.navbar svg {
+  height: 32px;
+  width: 32px;
+}
+
+.cart-box {
+  position: relative;
+}
+
+.navlink-logo {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+}
+
+.cart-box .cart-bubble {
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  border-radius: 20px;
+  top: -8px;
+  right: -4px;
+  border: 1px solid #f23827;
+  background-color: #efefef;
+  color: #222;
+  font-weight: bold;
+}
+
+.cart-box .cart-bubble span {
+  font-size: 13px;
 }
 
 .wrapper {
@@ -29,11 +122,25 @@
 }
 
 .toogle-menu,
-.cart {
+.cart,
+.cart-box {
   display: none;
 }
 
-@media (max-width: 960px) {
+.nav-link {
+  color: #f2f1df;
+  font-weight: bold;
+}
+
+.nav-links-desktop {
+  flex-direction: row;
+}
+
+.logo-titulo h6{
+  font-family: "Abril Fatface", cursive;
+}
+
+@media (max-width: 990px) {
   .navbar {
     display: flex;
     justify-content: center;
@@ -42,12 +149,25 @@
   .nav-title {
     display: none;
   }
+
+  .nav-links-desktop {
+    display: none !important;
+  }
+
+  .logo-titulo {
+    display: none;
+  }
+  .navbar-light .navbar-toggler {
+    display: inline;
+  }
+
   .wrapper {
     margin-left: auto;
     margin-right: auto;
   }
   .toogle-menu,
-  .cart {
+  .cart,
+  .cart-box {
     display: inline;
   }
 
