@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./card.css";
+import "./cards.css";
 import carousel2 from "../../assets/carousel2.png";
 
 import Card from "react-bootstrap/Card";
